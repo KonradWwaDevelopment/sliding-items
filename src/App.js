@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// import ReactSwipeAbleList from "./components/ReactSwipeableList";
+//BARDZO BARDZO WAŻNE!!!!!
+import "react-swipeable-list/dist/styles.css";
+import { CustomSwipeAbleList } from "./components/CustomSwipeableList";
+import ReactSwipeAbleList from "./components/ReactSwipeableList";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        minHeight: "100vh",
+        justifyContent: "center",
+        alignItems: "center",
+        overflowX: "hidden",
+      }}
+    >
+      <ReactSwipeAbleList />
+      <br />
+      <br />
+      <br />
+      CUSTOM SWIPEABLE
+      <br />
+      <br />
+      <br />
+      <CustomSwipeAbleList />
     </div>
   );
-}
+};
 
 export default App;
